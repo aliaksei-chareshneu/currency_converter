@@ -12,6 +12,7 @@ app.config["DEBUG"] = True
 def home():
     return "<h1>Kiwi Currency Converter</h1><p>This site is a prototype API for currency convertion</p>"
 
+# processes arguments and governs the currency conversion
 @app.route('/currency_converter', methods=['GET'])
 def currency_converter():
     if 'amount' in request.args:
