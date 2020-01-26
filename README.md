@@ -1,11 +1,11 @@
 # Currency converter (Python CLI & web API)
 
 The application converts a given amount of one currency into another currency, using the forex data.
-Both CLI and web API versions are available. Supported currencies are listed in the configuration.py file.
+Both CLI and web API versions are available. Supported currencies are listed in the ``configuration.py`` file.
 
 ## Getting Started & Prerequisites
 
-You will need Python 3 installed (http://www.python.org/getit/) and modules, listed in requirements.txt.
+You will need Python 3 installed (http://www.python.org/getit/) and modules, listed in ``requirements.txt``.
 
 To run the app, download the application files or clone repository, and install the requirements:
 
