@@ -6,16 +6,7 @@ from forex_python.converter import CurrencyCodes
 import json
 from configuration import currency_mapping
 
-# currency_codes = sorted(['EUR', 'IDR', 'BGN', 'ILS', 'GBP', 'DKK', 'CAD', 'JPY', 'HUF', 'RON', 'MYR', 'SEK', 'SGD', 'HKD', 'AUD', 'CHF', 'KRW', 'CNY', 'TRY', 'HRK', 'NZD', 'THB', 'USD', 'NOK', 'RUB', 'INR', 'MXN', 'CZK', 'BRL', 'PLN', 'PHP', 'ZAR'])
-# currency_symbols = [CurrencyCodes().get_symbol(currency_code) for currency_code in currency_codes]
-
-# currency_codes_symbols_mapping = {key: value for key, value in zip(currency_codes, currency_symbols)}
-# print(currency_codes_symbols_mapping)
-
 supported_currencies = sorted({v for item in currency_mapping.items() for v in item})
-
-# with open('configuration.py', 'w') as conf:
-    # json.dump(currency_codes_symbols_mapping, conf, indent=2)
 
 # checks if the passed currency is a currency symbol, returns currency otherwise
 def currency_checker(currency):
@@ -83,6 +74,3 @@ def conversion(args):
 if __name__ == "__main__":
     user_input = user_input_parser()
     print(json.dumps(conversion(user_input), indent=4))
-
-# for testing
-# python .\currency_converter.py --amount 100 --input_currency EUR --output_currency CZK
