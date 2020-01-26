@@ -14,7 +14,6 @@ def home():
 
 @app.route('/currency_converter', methods=['GET'])
 def currency_converter():
-    # Sample link: http://127.0.0.1:5000/currency_converter?amount=100&input_currency=EUR&output_currency=CZK
     if 'amount' in request.args:
         amount = float(request.args['amount'])
     else:
